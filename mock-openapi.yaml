@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: Mock OpenAPI
+  description: API for Mock
+  version: 0.0.1
+
+servers:
+  - url: http://localhost
+    description: ローカル環境用
+
+components:
+  securitySchemes:
+    JWTAuth:
+      in: header
+      name: Authorization
+      type: apiKey
+  
+tags:
+  - name: Authorization
+  - name: Me
+
+paths:
+  /signup:
+    $ref: ./paths/signup.yaml
+  /login:
+    $ref: ./paths/login.yaml
+  /me:
+    $ref: ./paths/me.yaml

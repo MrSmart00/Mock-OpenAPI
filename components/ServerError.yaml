@@ -1,0 +1,19 @@
+type: object
+required:
+  - code
+  - title
+  - message
+properties:
+  code:
+    type: integer
+    format: int32
+    description: エラーコード
+    example: 400
+  title:
+    type: string
+    description: "エラー表示タイトル"
+    example: "不明なエラー"
+  message:
+    type: string
+    description: "エラー表示メッセージ"
+    example: "データ取得に失敗しました"

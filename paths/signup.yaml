@@ -1,0 +1,32 @@
+post:
+  tags:
+    - Authorization
+  summary: サインアップ
+  description: サインアップ
+  operationId: postSignup
+  requestBody:
+    description: signup parameters
+    content:
+      application/json:
+        schema:
+          $ref: ../components/Credential.yaml
+    required: true
+  responses:
+    200:
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: ../components/AccessToken.yaml
+    default:
+      description: 標準エラー
+      content:
+        application/json:
+          schema:
+            $ref: ../components/ServerError.yaml
+    401:
+      description: 認証エラー
+      content:
+        application/json:
+          schema:
+            $ref: ../components/ServerError.yaml

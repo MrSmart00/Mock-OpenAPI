@@ -1,0 +1,27 @@
+type: object
+required:
+  - email
+  - uuid
+  - created_at
+  - logged_in_at
+properties:
+  email:
+    type: string
+    format: email
+    description: ユーザーE-mail
+    example: mock@example.com
+  uuid:
+    type: string
+    format: uuid
+    description: ユーザーID
+    example: abc123
+  created_at:
+    type: string
+    format: date-time
+    description: アカウント作成日時
+    example: 2017-07-21T17:32:28Z
+  logged_in_at:
+    type: string
+    format: date-time
+    description: 最終ログイン日時
+    example: 2017-07-21T17:32:28Z
